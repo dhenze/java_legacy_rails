@@ -1,3 +1,8 @@
 = JavaLegacyRails
 
-This project rocks and uses MIT-LICENSE.
+When porting an application from a JEE/Hibernate project to Rails, some of the inner workings are different, such as the serialization.
+To support the switch, I created this project to ease the transition.
+
+Right now the provided tools and helpers are:
+* EnumCode: to be used with Enum-serialized fields. They are basically like serialized Arrays, but for some reason are split by a commata and a space ", ". The EnumCoder reads these values and returns an array.
+** Usage: serialize :legacy_data, JavaLegacyRails::EnumCoder.new

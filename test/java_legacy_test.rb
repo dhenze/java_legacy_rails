@@ -4,7 +4,7 @@ class JavaLegacyTest < ActiveSupport::TestCase
   setup do
     @ec = JavaLegacyRails::EnumCoder.new
     @normal_data = "separated,by,commata,and,no,space"
-    @legacy_data = "separated, by, commata, and, space"
+    @legacy_data = " separated, by, commata, and, space"
   end
 
   test "truth" do

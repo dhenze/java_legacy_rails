@@ -20,6 +20,8 @@ module JavaLegacyRails
       return string unless string.is_a?(String)
       obj = string =~ /, / ? string.split(", ") : string.split(",")
 
+      obj.first.strip! if obj.size > 0
+
       unless obj.is_a?(Array) || obj.nil?
         raise ::ActiveRecord::SerializationTypeMismatch,
           "Attribute was supposed to be a String, but was a #{obj.class}"

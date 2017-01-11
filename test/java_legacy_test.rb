@@ -20,6 +20,6 @@ class JavaLegacyTest < ActiveSupport::TestCase
   end
 
   test "it dumps data only comma separated" do
-    assert_equal @normal_data, @ec.dump(["separated", "by", "commata", "and", "no", "space"])
+    assert_equal "separated, by, commata, and, no, space", @ec.dump(["separated", "by", "commata", "and", "no", "space"])
   end
 end

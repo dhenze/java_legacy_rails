@@ -13,7 +13,7 @@ module JavaLegacyRails
         raise ::ActiveRecord::SerializationTypeMismatch,
           "Attribute was supposed to be an Array, but was a #{arr.class}. -- #{arr.inspect}"
       end
-      arr.join(",")
+      arr.join(", ")
     end
 
     def load(string)

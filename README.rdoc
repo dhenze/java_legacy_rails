@@ -1,3 +1,6 @@
+*UNMAINTAINED*
+This is no longer supported, just leaving here for reference for now and removing it entirely at some stage soon.
+
 = JavaLegacyRails
 
 When porting an application from a JEE/Hibernate project to Rails, some of the inner workings are different, such as the serialization.
